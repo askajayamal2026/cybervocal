@@ -17,3 +17,9 @@ jobs:
 
       - name: Run 3D AI Animation Engine
         run: python app.py
+
+      - name: Upload Video Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cybervocal-3d-video
+          path: cybervocal_3d_output.mp4
