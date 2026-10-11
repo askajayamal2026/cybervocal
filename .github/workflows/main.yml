@@ -1,0 +1,19 @@
+name: Cybervocal 3D AI Engine
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-ai:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run 3D AI Animation Engine
+        run: python app.py
